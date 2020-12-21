@@ -37,22 +37,32 @@ class Laptop(models.Model):
 
   model_type = models.CharField(
     max_length=20,
-    choices=Type.choices)
+    choices=Type.choices,
+    blank=False,
+    default='HP-ProBook')
   
   serial_number = models.CharField(max_length=50)
   processor = models.CharField(
     max_length=2,
-    choices=Processor.choices)
+    choices=Processor.choices,
+    blank=False,
+    default='')
   ram = models.CharField(
     max_length=4,
-    choices=RAM.choices)
+    choices=RAM.choices,
+    blank=False,
+    default='')
   storage_type = models.CharField(
     max_length=4,
-    choices=StorageType.choices)
+    choices=StorageType.choices,
+    blank=False,
+    default='')
   
   storage_model = models.CharField(
     max_length=21,
-    choices=StorageModel.choices)
+    choices=StorageModel.choices,
+    blank=False,
+    default='')
   
   storage_capacity = models.PositiveIntegerField()
   dvd_cd_exists = models.BooleanField(default=False)
