@@ -7,6 +7,9 @@ verify_ssl = true
 
 [packages]
 django = "*"
+django-crispy-forms = "*"
+psycopg2 = "*"
+python-dotenv = "*"
 
 [requires]
 python_version = "3.8"
